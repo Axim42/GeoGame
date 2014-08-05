@@ -1,15 +1,27 @@
 package geography;
 
-import java.util.HashMap;
+import java.util.HashSet;
 
 public class Name {
 	
-	private HashMap<String , String> names;
-	
-
-	
+	private HashSet<String> names;
 	
 	public boolean hasName(String name){
-		return names.get(name)!=null;
+		return names.contains(name);
 	}
+
+	/**
+	 * @param names
+	 */
+	public Name(HashSet<String> names) {
+		super();
+		this.names = names;
+	}
+
+	@Override
+	public String toString() {
+		return "Name [names=" + names + "]";
+	}
+	
+	
 }
